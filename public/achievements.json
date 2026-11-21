@@ -1,0 +1,115 @@
+[
+  { "name": "Lśniące Wyposażenie", 
+    "description": "Diamentowa zbroja ratuje życie.", 
+    "image": "images/Achievements/Diamond_Chestplate.png" 
+  },
+  { "name": "Z Pacanowa do Łodzi", 
+    "description": "Popłyń łódką razem z kozą", 
+    "image": "images/Achievements/Oak_Boat.png" 
+  },
+  { "name": "Przeprowadzka znienacka", 
+    "description": "Użyj jedwabnego dotyku, by przenieść gniazdo bądź ul z 3 pszczołami w środku", 
+    "image": "images/3/Bee_Nest.png" 
+  },
+  { "name": "Miodowe lata", 
+    "description": "Wykorzystaj ognisko, by zebrać miód do butelki nie drażniąc przy tym pszczoł", 
+    "image": "images/2/Honey_Bottle.png" 
+  },
+  { "name": "Z woskiem?", 
+    "description": "Nałóż plaster miodu na blok miedzi!", 
+    "image": "images/Achievements/Honeycomb.png" 
+  },
+  { "name": "Przyjaźń leczy rany", 
+    "description": "Połącz siły z aksalotlem i wygraj bitwę", 
+    "image": "images/2/Bucket_of_Tropical_Fish.png" 
+  },
+  { "name": "Moc książek", 
+    "description": "Odbierz sygnał nadawany przez rzeźbioną biblioteczkę za pomocą komparatora", 
+    "image": "images/Achievements/Chiseled_Bookshelf.png" 
+  },
+  { "name": "Strzał w dziesiątkę", 
+    "description": "Traf w środek tarczy strzeleckiej z odległości co najmniej 30 metrów", 
+    "image": "images/1/Target.png" 
+  },
+  { "name": "Pojedynek snajperów", 
+    "description": "Zabij szkieleta z odległości co najmniej 50 metrów", 
+    "image": "images/Achievements/Arrow.png" 
+  },
+  { "name": "Szaszłyk godny wojownika", 
+    "description": "Uderz pięć mobów pojedyńczym atakiem szarży przy użyciu włóczni", 
+    "image": "images/Achievements/Wooden_Spear.png" 
+  },
+  { "name": "Na cztery spusty", 
+    "description": "Otwórz skarbiec za pomocą klucza próby", 
+    "image": "images/Achievements/Trial_Key.png" 
+  },
+  { "name": "Skarbie, wróciłem", 
+    "description": "Odblokuj złowieszczy skarbiec używając klucza próby", 
+    "image": "images/Achievements/Ominous_Trial_Key.png" 
+  },
+  { "name": "Z górki na pazurki!", 
+    "description": "Przeżyj upadek ze szczytu świata (granicy budowania) na samo jego dno", 
+    "image": "images/Achievements/Water_Bucket.png" 
+  },
+  { "name": "Niech się stanie światłość", 
+    "description": "Oskrob siekierą miedzianą lampę, żeby mocniej świeciła się w ciemności", 
+    "image": "images/Achievements/Copper_Bulb.png" 
+  },
+  { "name": "Lekki jak piórko", 
+    "description": "Przejdź po sybkim śnigu... nie zapadając się ", 
+    "image": "images/Achievements/Leather_Boots.png" 
+  },
+  { "name": "I gra muzyka", 
+    "description": "Tchnij życie w górskie łąki dzięki muzyce z szafy grającej", 
+    "image": "images/1/Jukebox.png" 
+  },
+  { "name": "Wygnanie na żądanie", 
+    "description": "Zabij przywódcę najazdu. Może rozważ trzymanie się z dala od wiosek na jakiś czas", 
+    "image": "images/3/Ominous_Banner.png" 
+  },
+  { "name": "Bohater wioski", 
+    "description": "Obroń wioskę przed najazdem", 
+    "image": "images/3/Ominous_Banner.png" 
+  },
+  { "name": "Ale dzban!", 
+    "description": "Stwórz dekorowany garniec z 4 odłamków ceramiki", 
+    "image": "images/Achievements/Decorated_Pot.png" 
+  },
+  { "name": "Prawdziwy rozbójnik? To ja!", 
+    "description": "Pokonaj rozbójnika jego własną bronią", 
+    "image": "images/1/Crossbow.png" 
+  },
+  { "name": "Osadnika grom nie tyka", 
+    "description": "Ochroń osadnika przed porażeniem, nie rozniecając przy tym ognia", 
+    "image": "images/Achievements/Lightning_Rod.png" 
+  },
+  { "name": "Wytwórcza wytwórnia wytwarzaczy", 
+    "description": "Bądź obok wytwarzacza, kiedy ten wytworzy wytwarzacz", 
+    "image": "images/1/Crafter.png" 
+  },
+  { "name": "Do usług", 
+    "description": "Przywołaj żelaznego golema, aby wspomóc ochronę wioski", 
+    "image": "images/Achievements/Carved_Pumpkin.png" 
+  },
+  { "name": "Kosmiczne ceny", 
+    "description": "Dobij targu z osadnikiem, będąc na szczycie świata  ", 
+    "image": "images/Achievements/Emerald.png" 
+  },
+  { "name": "Czy to ptak?", 
+    "description": "Spójrz na papugę przez lunetę", 
+    "image": "images/2/Spyglass.png" 
+  },
+  { "name": "Ostatni krzyk mody", 
+    "description": "Stwórz przyozdobioną zbroję na stole kowalkim", 
+    "image": "images/2/Coast_Armor_Trim.png" 
+  },
+  { "name": "Cicho sza", 
+    "description": "Przejdź ukradkiem koło sculkowego czujnika albo nadzorcy tak, aby nie zostać wykrytym", 
+    "image": "images/Achievements/Sculk_Sensor.png" 
+  },
+  { "name": "Lepka sprawa", 
+    "description": "Spowolnij upadek, ześlizgując się po bloku miodu", 
+    "image": "images/2/Honey_Block.png" 
+  }
+
+]
