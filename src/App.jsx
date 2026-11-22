@@ -70,7 +70,13 @@ const App = () => {
   }, []);
 
   const generateBoard = useCallback(
-    (fixedItems = null, modeOverride = null, itemsSource = allItems, achSource = allAchievements) => {
+    (
+      fixedItems = null,
+      modeOverride = null,
+      itemsSource = allItems,
+      achSource = allAchievements,
+      fixedAchievements = null
+    ) => {
       const modeToUse = modeOverride ?? difficulty;
       const result = buildBoardItems(itemsSource, modeToUse, fixedItems);
 
@@ -84,7 +90,12 @@ const App = () => {
       setWinIndices(new Set());
       setBoardKey((prev) => prev + 1);
 
-      if (!fixedItems && modeToUse === 'normal') {
+      if (Array.isArray(fixedAchievements) && fixedAchievements.length > 0 && Array.isArray(achSource)) {
+        const matched = fixedAchievements
+          .map((achName) => achSource.find((a) => a.name === achName))
+          .filter(Boolean);
+        setSelectedAchievements(matched.length > 0 ? matched : pickRandomAchievements(achSource));
+      } else if (!fixedItems && modeToUse === 'normal') {
         setSelectedAchievements(pickRandomAchievements(achSource));
       }
 
@@ -174,8 +185,11 @@ const App = () => {
       return;
     }
 
-    const boardNames = boardItems.map((item) => item.name);
-    const encoded = btoa(JSON.stringify(boardNames));
+    const payload = {
+      board: boardItems.map((item) => item.name),
+      achievements: selectedAchievements.map((ach) => ach.name),
+    };
+    const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
 
     clearTimeout(closePopupTimerRef.current);
     setExportCode(encoded);
@@ -233,11 +247,32 @@ const App = () => {
     }
 
     try {
-      const jsonString = atob(trimmed);
-      const importedNames = JSON.parse(jsonString);
+      const jsonString = decodeURIComponent(escape(atob(trimmed)));
+      const parsed = JSON.parse(jsonString);
 
-      if (Array.isArray(importedNames) && importedNames.length === BOARD_SIZE * BOARD_SIZE) {
-        const success = generateBoard(importedNames);
+      if (
+        parsed &&
+        !Array.isArray(parsed) &&
+        Array.isArray(parsed.board) &&
+        parsed.board.length === BOARD_SIZE * BOARD_SIZE
+      ) {
+        const success = generateBoard(
+          parsed.board,
+          null,
+          allItems,
+          allAchievements,
+          Array.isArray(parsed.achievements) ? parsed.achievements : null
+        );
+        if (success) {
+          showNotification('Plansza i osiągnięcia zostały pomyślnie zaimportowane!');
+          return true;
+        }
+        return false;
+      }
+
+
+      if (Array.isArray(parsed) && parsed.length === BOARD_SIZE * BOARD_SIZE) {
+        const success = generateBoard(parsed);
         if (success) {
           showNotification('Plansza została pomyślnie zaimportowana!');
           return true;
@@ -301,6 +336,8 @@ const App = () => {
       });
   };
 
+  const achievementsKey = selectedAchievements.map((ach) => ach.name).join('|') || 'empty';
+
   return (
     <div className="bingo-app-wrapper">
       <div className="container text-center d-flex flex-column align-items-center justify-content-center py-4">
@@ -344,7 +381,7 @@ const App = () => {
           </button>
         </div>
 
-        <AchievementsBar achievements={selectedAchievements} />
+        <AchievementsBar key={achievementsKey} achievements={selectedAchievements} />
 
         <ImportExportBox onExport={handleExportBoard} onImport={handleImportBoard} />
 

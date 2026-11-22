@@ -27,8 +27,8 @@ const AchievementsBar = ({ achievements }) => {
       visible: true,
       name: ach.name,
       description: ach.description,
-      left: e.pageX + 15,
-      top: e.pageY + 15,
+      left: e.clientX + 15,
+      top: e.clientY + 15,
     });
   };
 

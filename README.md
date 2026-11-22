@@ -1,16 +1,40 @@
-# React + Vite
+# Minecraft Bingo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplikacja webowa w React do rozgrywek Minecraft Bingo z obsługą poziomów trudności (Normalny oraz Łatwy), 
+losowaniem zestawu osiągnięć, eksportem i importem kodu planszy, pobieraniem planszy jako obraz PNG oraz wbudowanym generatorem drużyn.
 
-Currently, two official plugins are available:
+- [Strona z której brałem zdjęcia do planszy](https://minecraft.wiki/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Funkcje
 
-## React Compiler
+### Plansza Bingo (6x6):
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Tryb Normalny – losuje przedmioty o różnym poziomie trudności (weight / difficulty 1, 2 oraz 3) z zachowaniem limitów w wierszach i kolumnach.
 
-## Expanding the ESLint configuration
+- Tryb Łatwy – buduje planszę z przedmiotów o trudności 1 i 2.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Oznaczanie ukończonych pól kliknięciem oraz automatyczne podświetlanie pełnych linii (wierszy i kolumn) jako wygranych.
+
+- Podpowiedź z nazwą przedmiotu podczas najechania kursorem
+
+### Pasek osiągnięć:
+
+- Losuje zestaw osiągnięć (domyślnie 5 pozycji w trybie normalnym).
+
+- Pozwala odhaczać zdobyte osiągnięcia oraz wyświetla ich nazwę i opis w dymku po najechaniu kursorem.
+
+- Posiada zapasową ikonę (images/2/Grass_Block.png) w razie błędu ładowania obrazka osiągnięcia.
+
+### Eksport i import planszy:
+
+- Eksportuje aktualny układ planszy do zakodowanego ciągu tekstowego (Base64) z podglądem i kopiowaniem do schowka.
+
+- Pozwala wkleić kod i odtworzyć planszę
+
+### Eksport do obrazu PNG:
+
+- Generuje zrzut planszy (#bingo-board) za pomocą html2canvas i pobiera go jako minecraft_bingo_board.png.
+
+### Generator drużyn i losowanie:
+
+- Dzielenie listy graczy (po jednym w linii) na drużyny o zadanej liczbie osób lub losowanie pojedynczego zwycięzcy.

@@ -33,17 +33,17 @@ const BingoBoard = ({boardRef, items, completedIndices, winIndices, onToggleCell
       setTooltip({
         visible: true,
         text: item.name,
-        right: `${window.innerWidth - e.pageX + 15}px`,
+        right: `${window.innerWidth - e.clientX + 15}px`,
         left: 'auto',
-        top: `${e.pageY + 10}px`,
+        top: `${e.clientY + 10}px`,
       });
     } else {
       setTooltip({
         visible: true,
         text: item.name,
-        left: `${e.pageX + 10}px`,
+        left: `${e.clientX + 10}px`,
         right: 'auto',
-        top: `${e.pageY + 10}px`,
+        top: `${e.clientY + 10}px`,
       });
     }
   };
