@@ -155,6 +155,11 @@
     "difficulty": 1
   },
   {
+    "name": "Cobweb",
+    "image": "images/1/Cobweb.png",
+    "difficulty": 1
+  },
+  {
     "name": "Compass",
     "image": "images/1/Compass.png",
     "difficulty": 1
@@ -280,6 +285,11 @@
     "difficulty": 1
   },
   {
+    "name": "Lead",
+    "image": "images/1/Lead.png",
+    "difficulty": 1
+  },
+  {
     "name": "Lectern",
     "image": "images/1/Lectern.png",
     "difficulty": 1
@@ -342,6 +352,11 @@
   {
     "name": "Mud_Bricks",
     "image": "images/1/Mud_Bricks.png",
+    "difficulty": 1
+  },
+  {
+    "name": "Name_Tag",
+    "image": "images/1/Name_Tag.png",
     "difficulty": 1
   },
   {
@@ -552,6 +567,11 @@
   {
     "name": "Calcite",
     "image": "images/2/Calcite.png",
+    "difficulty": 2
+  },
+  {
+    "name": "Calibrated_Sculk_Sensor",
+    "image": "images/2/Calibrated_Sculk_Sensor.gif",
     "difficulty": 2
   },
   {
@@ -885,6 +905,11 @@
     "difficulty": 2
   },
   {
+    "name": "Potent_Sulfur",
+    "image": "images/2/Potent_Sulfur.png",
+    "difficulty": 2
+  },
+  {
     "name": "Potion_of_Water_Breathing",
     "image": "images/2/Potion_of_Water_Breathing.png",
     "difficulty": 2
@@ -1000,6 +1025,11 @@
     "difficulty": 3
   },
   {
+    "name": "Block_of_Resin",
+    "image": "images/3/Block_of_Resin.png",
+    "difficulty": 3
+  },
+  {
     "name": "Bottle_o'_Enchanting",
     "image": "images/3/Bottle_o'_Enchanting.png",
     "difficulty": 3
@@ -1060,11 +1090,6 @@
     "difficulty": 3
   },
   {
-    "name": "Name_Tag",
-    "image": "images/3/Name_Tag.png",
-    "difficulty": 3
-  },
-  {
     "name": "Nautilus_Shell",
     "image": "images/2/Nautilus_Shell.png",
     "difficulty": 3
@@ -1097,6 +1122,11 @@
   {
     "name": "Red_Mushroom_Block",
     "image": "images/3/Red_Mushroom_Block.png",
+    "difficulty": 3
+  },
+  {
+    "name": "Respawn_Anchor",
+    "image": "images/3/Respawn_Anchor.png",
     "difficulty": 3
   },
   {
